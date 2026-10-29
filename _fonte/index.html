@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Meu Norte Finanças — as contas da casa em ordem</title>
+  <meta name="description" content="Organize as contas da casa, saiba o que vence e veja até quando o dinheiro dá. Para você, o casal ou a família toda. Teste grátis por 14 dias.">
+  <link rel="canonical" href="https://meunortefinancas.com.br/">
+  <link rel="alternate" hreflang="pt-BR" href="https://meunortefinancas.com.br/">
+  <link rel="alternate" hreflang="en" href="https://meunortefinancas.com.br/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meu Norte Finanças — as contas da casa em ordem">
+  <meta property="og:description" content="Contas, vencimentos, faturas e a previsão do seu saldo num lugar só. Teste grátis por 14 dias.">
+  <meta property="og:url" content="https://meunortefinancas.com.br/">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="theme-color" content="#159B62">
+  <link rel="icon" href="marca/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="marca/favicon.svg" type="image/svg+xml">
+  <script src="tema.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="ilustracoes.css">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="largura topo-conteudo">
+    <a href="#inicio" class="marca">
+      <img src="marca/simbolo-fundo-claro.svg" class="so-tema-claro" alt="" width="34" height="34">
+      <img src="marca/simbolo-fundo-escuro.svg" class="so-tema-escuro" alt="" width="34" height="34">
+      <span>Meu Norte <span class="marca-financas">Finanças</span></span>
+    </a>
+    <nav class="topo-links" aria-label="Seções">
+      <a href="#recursos">Recursos</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#precos">Preços</a>
+      <a href="#perguntas">Perguntas</a>
+    </nav>
+    <div class="topo-acoes">
+      <a href="en/" class="botao-redondo idioma" hreflang="en" lang="en" title="English version">EN</a>
+      <button type="button" class="botao-redondo botao-tema" aria-label="Alternar tema claro e escuro" title="Tema claro ou escuro"><span class="so-tema-escuro">{{ic:sol}}</span><span class="so-tema-claro">{{ic:lua}}</span></button>
+      <a href="https://app.meunortefinancas.com.br/login" class="link-entrar">Entrar</a>
+      <a href="https://app.meunortefinancas.com.br/register" class="botao botao-principal">Testar grátis</a>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- Início: o que é, em 3 segundos -->
+  <section class="inicio largura">
+    <div class="inicio-texto">
+      <span class="selo">{{ic:bussola}} Finanças da casa, sem planilha</span>
+      <h1>Saiba para onde vai o seu dinheiro <em>e até quando ele dá</em></h1>
+      <p class="inicio-sub">O Meu Norte organiza as contas da casa, avisa o que está para vencer e mostra a previsão do seu saldo mês a mês. Para você, para o casal ou para a família toda.</p>
+      <div class="inicio-acoes">
+        <a href="https://app.meunortefinancas.com.br/register" class="botao botao-principal botao-grande">Testar grátis por 14 dias {{ic:seta-direita}}</a>
+        <a href="#recursos" class="botao botao-contorno botao-grande">Ver como funciona</a>
+      </div>
+      <p class="inicio-garantias"><span>{{ic:check}} Sem cartão de crédito no teste</span><span>{{ic:check}} Cancele quando quiser</span><span>{{ic:check}} Seus dados são seus</span></p>
+    </div>
+
+    <div class="inicio-painel" aria-hidden="true">
+      <div class="painel-falso">
+        <div class="painel-falso-topo"><span></span><span></span><span></span><strong>Outubro</strong></div>
+        <div class="painel-falso-cartoes">
+          <div class="painel-falso-cartao destaque"><small>Disponível hoje</small><b>R$ 3.870,00</b><i>saldo das suas contas</i></div>
+          <div class="painel-falso-cartao"><small>Ainda vai sair</small><b>R$ 2.120,00</b><span class="painel-falso-barra"><span></span></span></div>
+          <div class="painel-falso-cartao"><small>Sobra prevista</small><b class="positivo">R$ 2.260,00</b><i class="positivo">▲ R$ 310 a mais</i></div>
+        </div>
+        <div class="painel-falso-atencao">
+          <small>Precisa da sua atenção</small>
+          <p>{{ic:alerta}} Luz vence amanhã: R$ 180,00 <span>Pagar →</span></p>
+          <p>{{ic:cartao}} Fatura do cartão fecha dia 3 <span>Ver →</span></p>
+        </div>
+        <div class="painel-falso-grafico"><span style="--a:62%"></span><span style="--a:70%"></span><span style="--a:58%"></span><span style="--a:76%"></span><span style="--a:68%"></span><span style="--a:82%"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos -->
+  <section id="recursos" class="secao largura">
+    <div class="secao-titulo">
+      <h2>Tudo o que a casa precisa, num lugar só</h2>
+      <p>Lance em segundos e deixe o Meu Norte fazer as contas.</p>
+    </div>
+    <div class="recursos">
+      <article class="recurso">{{il:boleto}}<h3>Nenhuma conta esquecida</h3><p>Pagamentos do mês separados em atrasadas, hoje, esta semana e depois. Aviso no sino, no e-mail e no Telegram.</p></article>
+      <article class="recurso">{{il:luneta}}<h3>Até quando o dinheiro dá</h3><p>A previsão de saldo mostra mês a mês como as contas vão ficar, de 6 meses a 5 anos, a partir do saldo de hoje.</p></article>
+      <article class="recurso">{{il:cartao}}<h3>Fatura sem susto</h3><p>Compras parceladas caem na fatura certa. Pague a fatura uma vez, pela conta que quiser: nada é descontado duas vezes.</p></article>
+      <article class="recurso">{{il:carteira}}<h3>Saldo de verdade</h3><p>Conta corrente, poupança e carteira com o saldo de hoje. Pagar e receber mexe na conta certa, com "Desfazer" se errar.</p></article>
+      <article class="recurso">{{il:alvo}}<h3>Orçamento que avisa</h3><p>Limite por categoria que vale todo mês. Quando passar de 80%, o painel avisa antes de virar problema.</p></article>
+      <article class="recurso">{{il:familia}}<h3>A família junta</h3><p>Cada pessoa com o seu acesso. O administrador escolhe quem vê cada tela.</p></article>
+    </div>
+  </section>
+
+  <!-- Simulador -->
+  <section id="simulador" class="faixa-escura">
+    <div class="largura simulador">
+      <div class="simulador-texto">
+        <span class="selo selo-claro">{{ic:sobra}} Simulador</span>
+        <h2>Quanto sobra e em quanto tempo você forma a sua reserva?</h2>
+        <p>Coloque o que entra e o que sai por mês. É uma conta rápida, só aqui no seu navegador: nada é enviado.</p>
+      </div>
+      <form class="simulador-cartao" id="simulador-form" novalidate>
+        <label>Quanto entra por mês
+          <span class="campo-dinheiro"><span>R$</span><input type="text" inputmode="decimal" id="sim-entra" value="8.500"></span>
+        </label>
+        <label>Quanto sai por mês
+          <span class="campo-dinheiro"><span>R$</span><input type="text" inputmode="decimal" id="sim-sai" value="6.200"></span>
+        </label>
+        <div class="simulador-resultado" aria-live="polite">
+          <div><small>Sobra por mês</small><strong id="sim-sobra">R$ 2.300,00</strong></div>
+          <div><small>Você guarda</small><strong id="sim-taxa">27%</strong></div>
+          <div class="simulador-reserva"><small>Reserva de emergência (6 meses de gastos)</small><strong id="sim-reserva">em 17 meses</strong></div>
+        </div>
+        <a href="https://app.meunortefinancas.com.br/register" class="botao botao-principal">Acompanhar de verdade no Meu Norte {{ic:seta-direita}}</a>
+      </form>
+    </div>
+  </section>
+
+  <!-- Preços -->
+  <section id="precos" class="secao largura">
+    <div class="secao-titulo">
+      <h2>Um preço por família, não por pessoa</h2>
+      <p>Comece com 14 dias grátis no plano Família. Sem cartão no teste.</p>
+      <div class="alternar-periodo" role="group" aria-label="Período">
+        <button type="button" class="ativo" data-periodo="mensal">Mensal</button>
+        <button type="button" data-periodo="anual">Anual <span>2 meses grátis</span></button>
+      </div>
+    </div>
+    <div class="planos">
+      <article class="plano">
+        <h3>Essencial</h3>
+        <p class="plano-para">Para quem organiza sozinho ou a dois</p>
+        <p class="plano-preco"><span class="preco-mensal">R$ 9,90<small>/mês</small></span><span class="preco-anual">R$ 99<small>/ano</small></span></p>
+        <ul>
+          <li>{{ic:check}} Até 2 pessoas</li>
+          <li>{{ic:check}} Contas, pagamentos e faturas</li>
+          <li>{{ic:check}} Previsão de saldo e orçamento</li>
+          <li>{{ic:check}} Avisos por e-mail</li>
+        </ul>
+        <a href="https://app.meunortefinancas.com.br/register" class="botao botao-contorno">Começar</a>
+      </article>
+      <article class="plano plano-destaque">
+        <span class="plano-etiqueta">14 dias grátis</span>
+        <h3>Família</h3>
+        <p class="plano-para">Para a casa toda junta</p>
+        <p class="plano-preco"><span class="preco-mensal">R$ 14,90<small>/mês</small></span><span class="preco-anual">R$ 149<small>/ano</small></span></p>
+        <ul>
+          <li>{{ic:check}} Até 5 pessoas</li>
+          <li>{{ic:check}} Tudo do Essencial</li>
+          <li>{{ic:check}} Lançamento pela notificação do banco no celular</li>
+          <li>{{ic:check}} Avisos no Telegram</li>
+          <li>{{ic:check}} Regras de categorização automática</li>
+        </ul>
+        <a href="https://app.meunortefinancas.com.br/register" class="botao botao-principal">Testar grátis</a>
+      </article>
+      <article class="plano">
+        <h3>Completo</h3>
+        <p class="plano-para">Para quem quer tudo automático</p>
+        <p class="plano-preco"><span class="preco-mensal">R$ 29,90<small>/mês</small></span><span class="preco-anual">R$ 299<small>/ano</small></span></p>
+        <ul>
+          <li>{{ic:check}} Até 8 pessoas</li>
+          <li>{{ic:check}} Tudo do Família</li>
+          <li>{{ic:check}} Extrato do banco automático (até 3 contas)</li>
+          <li>{{ic:check}} Planilha no Google Sheets</li>
+        </ul>
+        <a href="https://app.meunortefinancas.com.br/register" class="botao botao-contorno">Começar</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Segurança -->
+  <section class="secao largura seguranca">
+    {{il:escudo}}
+    <div>
+      <h2>Seus dados, do seu jeito</h2>
+      <ul>
+        <li>{{ic:cadeado}} Conexão sempre criptografada e backup diário cifrado, guardado fora do servidor.</li>
+        <li>{{ic:download}} Baixe todos os seus dados quando quiser; exclua a conta a qualquer momento.</li>
+        <li>{{ic:escudo}} Nada de anúncios e nada de vender dados. Integração com o banco só com a sua autorização.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Perguntas -->
+  <section id="perguntas" class="secao largura">
+    <div class="secao-titulo">
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="perguntas">
+      <details><summary>Preciso ligar a minha conta do banco?</summary><p>Não. Você pode lançar tudo à mão, em segundos. Se quiser automático, o plano Família lê a notificação do banco no celular e o Completo puxa o extrato pela integração bancária, sempre com a sua autorização.</p></details>
+      <details><summary>É seguro?</summary><p>A conexão é criptografada, o banco de dados tem backup diário cifrado e ninguém da equipe vê os seus valores. Você baixa ou apaga os seus dados quando quiser, como manda a LGPD.</p></details>
+      <details><summary>Como funciona o teste grátis?</summary><p>São 14 dias no plano Família, sem cartão. No fim, você escolhe um plano. Se não escolher, nada é apagado: você continua vendo e baixando tudo, só não lança coisas novas.</p></details>
+      <details><summary>Posso cancelar quando quiser?</summary><p>Sim, direto no app, sem falar com ninguém. O plano vale até o fim do período pago, e os seus dados continuam disponíveis para baixar.</p></details>
+      <details><summary>A família toda pode usar?</summary><p>Sim. O preço é por família: cada pessoa entra com o seu login, e o administrador escolhe quem vê cada tela.</p></details>
+      <details><summary>Funciona no celular?</summary><p>Funciona no navegador do celular, com atalhos no rodapé para lançar, pagar e ver a previsão. Dá para adicionar à tela inicial como um app.</p></details>
+    </div>
+  </section>
+
+  <!-- Fechamento -->
+  <section class="fechamento largura">
+    {{il:notas}}
+    <h2>Chegou até aqui? Então é hora de achar o seu norte.</h2>
+    <p>Em 5 minutos você cadastra a conta principal, as contas fixas e já vê quanto sobra no mês.</p>
+    <a href="https://app.meunortefinancas.com.br/register" class="botao botao-principal botao-grande">Testar grátis por 14 dias {{ic:seta-direita}}</a>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="largura rodape-conteudo">
+    <span class="marca marca-pequena"><img src="marca/simbolo-fundo-claro.svg" class="so-tema-claro" alt="" width="24" height="24"><img src="marca/simbolo-fundo-escuro.svg" class="so-tema-escuro" alt="" width="24" height="24"> Meu Norte Finanças</span>
+    <nav aria-label="Links do rodapé">
+      <a href="https://app.meunortefinancas.com.br/termos">Termos de Uso</a>
+      <a href="https://app.meunortefinancas.com.br/privacidade">Política de Privacidade</a>
+      <a href="https://app.meunortefinancas.com.br/login">Entrar</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
