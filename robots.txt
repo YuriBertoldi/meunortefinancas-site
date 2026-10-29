@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://meunortefinancas.com.br/sitemap.xml

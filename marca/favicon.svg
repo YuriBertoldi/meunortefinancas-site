@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Icone da aba: o simbolo do Meu Norte Financas (o N com as barras
+       subindo, a seta do norte e o anel de bussola) num quadrado com o fundo
+       da marca. Segue o tema do sistema operacional. As cores que mudam com o
+       tema ficam em regras de CSS: var() nao funciona dentro de atributos como
+       fill="" e stop-color="" (o icone saia preto). -->
+  <style>
+    .fundo-1 { stop-color: #0F3A28; }
+    .fundo-2 { stop-color: #0B1014; }
+    .letra { fill: #FFFFFF; }
+    .letra-gradiente { stop-color: #FFFFFF; }
+    @media (prefers-color-scheme: light) {
+      .fundo-1 { stop-color: #FFFFFF; }
+      .fundo-2 { stop-color: #E3F5EB; }
+      .letra { fill: #1B2A22; }
+      .letra-gradiente { stop-color: #1B2A22; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" class="fundo-1"/>
+      <stop offset="1" class="fundo-2"/>
+    </linearGradient>
+    <linearGradient id="barras" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#159B62"/>
+      <stop offset="1" stop-color="#75E6B0"/>
+    </linearGradient>
+    <linearGradient id="diagonal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset=".55" class="letra-gradiente"/>
+      <stop offset="1" stop-color="#159B62"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="26" fill="url(#fundo)"/>
+  <g transform="translate(6 8) scale(.9)">
+    <circle cx="80" cy="42" r="30" fill="none" stroke="#159B62" stroke-width="5" stroke-linecap="round" stroke-dasharray="140 48.5" transform="rotate(166.5 80 42)"/>
+    <path d="M80 4 L84.5 13 L80 11 L75.5 13 Z" fill="#159B62"/>
+    <path d="M118 42 L109 46.5 L111 42 L109 37.5 Z" fill="#159B62"/>
+    <path d="M24 37 Q24 30 31 30 L41 30 Q46 30 48.6 34.4 L84.5 95 Q87.4 100 81.6 100 L72.5 100 Q67.8 100 65.4 96 L42 57 L42 70 L24 70 Z" fill="url(#diagonal)"/>
+    <rect x="70" y="48" width="16" height="52" rx="2" class="letra"/>
+    <rect x="14" y="86" width="7" height="14" rx="1.5" fill="url(#barras)"/>
+    <rect x="24" y="79" width="7" height="21" rx="1.5" fill="url(#barras)"/>
+    <rect x="34" y="72" width="7" height="28" rx="1.5" fill="url(#barras)"/>
+    <path d="M78 14 L94 52 L78 44 Z" fill="#159B62"/>
+    <path d="M78 14 L62 52 L78 44 Z" class="letra"/>
+  </g>
+</svg>

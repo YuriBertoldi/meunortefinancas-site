@@ -1,0 +1,27 @@
+/* Ilustracoes da marca (J24): SVG em static/marca/ilustracoes/, colocado
+   inline pela funcao de template "ilustracao". As cores vem dos tokens
+   (static/tokens.css), entao a mesma ilustracao serve aos dois temas.
+   Regras de uso em documentacao/planos/referencia-abacatepay.md. */
+/* Icones de traco (static/marca/icones, funcao "icone"): a cor e a do texto. */
+.icone { width: 1.15em; height: 1.15em; flex-shrink: 0; vertical-align: -0.2em; }
+
+.ilustracao { display: block; width: 96px; height: 96px; margin: 0 auto; overflow: visible; }
+.ilustracao-grande .ilustracao { width: 160px; height: 160px; }
+.ilustracao-pequena .ilustracao { width: 56px; height: 56px; }
+
+.il-halo { fill: color-mix(in srgb, var(--brand-accent) 12%, transparent); }
+.il-pedestal { fill: color-mix(in srgb, var(--text-primary) 12%, var(--surface)); stroke: var(--border); stroke-width: 1.5; }
+.il-aro { fill: var(--surface-elevated); stroke: var(--border); stroke-width: 1.5; }
+.il-rosa { fill: color-mix(in srgb, var(--brand-primary) 60%, transparent); }
+.il-corpo {
+  fill: color-mix(in srgb, var(--brand-accent) 28%, var(--surface));
+  stroke: var(--brand-primary); stroke-width: 2.5; stroke-linejoin: round;
+}
+.il-claro {
+  fill: color-mix(in srgb, var(--brand-mint) 55%, var(--surface));
+  stroke: var(--brand-primary); stroke-width: 2; stroke-linejoin: round;
+}
+.il-faixa, .il-ponto { fill: var(--brand-primary); }
+.il-traco { fill: none; stroke: var(--brand-primary); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.il-fino { stroke-width: 2; }
+.il-grosso { stroke-width: 4; }

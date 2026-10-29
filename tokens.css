@@ -1,0 +1,130 @@
+/* ====================================================
+   Meu Norte Finanças — tokens de cor (todas as telas carregam este arquivo antes do app.css)
+   Cores: guia de identidade visual (.claude/skills/identidade-visual).
+   Tokens do guia em :root (tema claro) e [data-theme="dark"]; as variaveis
+   antigas (--bg-base, --color-receita...) apontam para eles. Codigo novo usa
+   os tokens; transparencia com color-mix(in srgb, var(--token) N%, transparent).
+   ==================================================== */
+
+:root {
+  /* Marca */
+  --brand-primary: #159B62;
+  --brand-primary-hover: #117C4E;
+  --brand-accent: #22C477;
+  --brand-mint: #75E6B0;
+  --brand-soft: #E5F7ED;
+  --brand-gradient: linear-gradient(135deg, #159B62 0%, #22C477 55%, #75E6B0 100%);
+  --on-brand: #FFFFFF; /* texto sobre o verde da marca */
+
+  /* Tema claro */
+  --bg-primary: #F4F8F6;
+  --bg-gradient-start: #F7FBF9;
+  --bg-gradient-middle: #EDF7F2;
+  --bg-gradient-end: #DDF3E7;
+  --surface: #FFFFFF;
+  --surface-elevated: #FFFFFF;
+  --border: #DCE8E1;
+  --border-strong: #C5D6CC;
+  --text-primary: #1B2A22;
+  --text-secondary: #66756D;
+  --text-muted: #7C8B83;
+  --text-dim: #9AA8A0;
+  --sidebar-bg: #FFFFFF;
+  --app-background: linear-gradient(135deg, #F7FBF9 0%, #EDF7F2 52%, #DDF3E7 100%);
+
+  /* Cores semanticas */
+  --success: #159B62;
+  --danger: #F04444;
+  --danger-hover: #D63535;
+  --warning: #F5B942;
+  --warning-text: #8A5A00; /* texto de alerta legivel sobre fundo claro */
+  --info: #438BE8;
+  --wealth: #A855C7;
+
+  /* Variaveis antigas -> tokens */
+  --bg-base: var(--bg-primary);
+  --bg-elev-1: var(--surface);
+  --bg-elev-2: var(--surface-elevated);
+  --bg-input: var(--surface);
+  --border-soft: var(--border);
+  --border-mid: var(--border-strong);
+  --color-receita: var(--success);
+  --color-receita-2: var(--brand-primary-hover);
+  --color-despesa: var(--danger);
+  --color-despesa-2: var(--danger-hover);
+  --color-sobra: var(--info);
+  --color-negativo: var(--danger);
+  --color-investido: var(--wealth);
+  --color-warn: var(--warning);
+
+  --sidebar-width: 260px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  --shadow-card: 0 4px 16px rgba(27, 42, 34, 0.08);
+  --shadow-glow-green: 0 8px 24px color-mix(in srgb, var(--brand-primary) 25%, transparent);
+}
+
+[data-theme="dark"] {
+  /* Tema escuro */
+  --bg-primary: #071C19;
+  --bg-gradient-start: #061512;
+  --bg-gradient-middle: #092720;
+  --bg-gradient-end: #064B36;
+  --surface: #111B22;
+  --surface-elevated: #192721;
+  --border: #2A3932;
+  --border-strong: #3A4C44;
+  --text-primary: #F1F7F3;
+  --text-secondary: #A2B2A8;
+  --text-muted: #7F9087;
+  --text-dim: #65766D;
+  --sidebar-bg: #0D1A17; /* grafite esverdeado */
+  --app-background:
+    radial-gradient(ellipse at 85% 0%, rgba(34, 196, 119, 0.22) 0%, rgba(34, 196, 119, 0) 55%),
+    linear-gradient(135deg, #061512 0%, #0A211C 60%, #071C19 100%);
+
+  /* Ajustes para contraste no modo escuro */
+  --brand-primary: #22C477;
+  --brand-primary-hover: #75E6B0;
+  --brand-accent: #75E6B0;
+  --brand-mint: #75E6B0;
+  --brand-soft: #163D2D;
+  --on-brand: #04140D; /* texto escuro sobre o verde claro: contraste no escuro */
+
+  --success: #4ADE91;
+  --danger: #FF6464;
+  --danger-hover: #FF8585;
+  --warning: #F5C969;
+  --warning-text: #F5C969;
+  --info: #76AEFF;
+  --wealth: #C58AE0;
+
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.30);
+}
+
+/* Pico CSS usa as proprias variaveis: apontam para os tokens nos dois temas. */
+:root[data-theme] {
+  --pico-primary: var(--brand-primary);
+  --pico-primary-background: var(--brand-primary);
+  --pico-primary-border: var(--brand-primary);
+  --pico-primary-hover: var(--brand-primary-hover);
+  --pico-primary-hover-background: var(--brand-primary-hover);
+  --pico-primary-hover-border: var(--brand-primary-hover);
+  --pico-primary-focus: color-mix(in srgb, var(--brand-primary) 30%, transparent);
+  --pico-primary-inverse: var(--on-brand);
+  --pico-background-color: var(--bg-primary);
+  --pico-color: var(--text-primary);
+  --pico-muted-color: var(--text-secondary);
+  --pico-muted-border-color: var(--border);
+  --pico-card-background-color: var(--surface);
+  --pico-card-sectioning-background-color: var(--surface-elevated);
+  --pico-form-element-background-color: var(--surface);
+  --pico-form-element-border-color: var(--border);
+  --pico-form-element-focus-color: var(--brand-primary);
+  --pico-form-element-invalid-border-color: var(--danger);
+  --pico-del-color: var(--danger);
+  --pico-ins-color: var(--success);
+}
