@@ -1,14 +1,30 @@
-// Site do Meu Norte Finanças: simulador de sobra, preço mensal/anual e
+// Site do Meu Norte Finanças: tema, simulador de sobra, preço mensal/anual e
 // entrada suave das seções. Tudo roda no navegador; nada é enviado.
 (function () {
+  // Pagina em ingles (/en/): numeros com ponto decimal e textos traduzidos.
+  const ingles = document.documentElement.lang === 'en';
+  const textos = ingles
+    ? { acima: 'expenses above income', anos: 'in over 10 years', umMes: 'in 1 month', meses: function (n) { return 'in ' + n + ' months'; } }
+    : { acima: 'gastos acima do que entra', anos: 'em mais de 10 anos', umMes: 'em 1 mês', meses: function (n) { return 'em ' + n + ' meses'; } };
+
   function lerValor(texto) {
     const limpo = String(texto).replace(/[^\d,.-]/g, '');
+    if (ingles) return parseFloat(limpo.replace(/,/g, '')) || 0;
     if (limpo.includes(',')) return parseFloat(limpo.replace(/\./g, '').replace(',', '.')) || 0;
     return parseFloat(limpo.replace(/\./g, '')) || 0;
   }
   function brl(valor) {
-    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    return valor.toLocaleString(ingles ? 'en-US' : 'pt-BR', { style: 'currency', currency: 'BRL' });
   }
+
+  // Tema: o botao alterna e guarda a escolha (tema.js aplica no carregamento).
+  document.querySelectorAll('.botao-tema').forEach(function (botao) {
+    botao.addEventListener('click', function () {
+      const novo = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', novo);
+      try { localStorage.setItem('tema-do-site', novo); } catch (erro) { /* sem armazenamento: vale so nesta visita */ }
+    });
+  });
 
   // Simulador: sobra, quanto se guarda e em quantos meses forma a reserva de
   // 6 meses de gastos.
@@ -23,10 +39,10 @@
     document.getElementById('sim-taxa').textContent = receitas > 0 ? Math.round(sobra / receitas * 100) + '%' : '—';
     const reserva = despesas * 6;
     let texto = '—';
-    if (sobra <= 0) texto = 'gastos acima do que entra';
+    if (sobra <= 0) texto = textos.acima;
     else if (reserva > 0) {
       const meses = Math.ceil(reserva / sobra);
-      texto = meses > 120 ? 'em mais de 10 anos' : meses <= 1 ? 'em 1 mês' : 'em ' + meses + ' meses';
+      texto = meses > 120 ? textos.anos : meses <= 1 ? textos.umMes : textos.meses(meses);
     }
     document.getElementById('sim-reserva').textContent = texto;
   }

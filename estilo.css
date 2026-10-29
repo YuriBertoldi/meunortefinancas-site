@@ -195,3 +195,22 @@ a { color: var(--brand-primary); }
   .marca { font-size: .9rem; gap: .4rem; }
   .topo-acoes .botao { padding: .55rem .85rem; font-size: .86rem; }
 }
+
+/* Idioma e tema no topo */
+.botao-redondo {
+  all: unset; box-sizing: border-box; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text-secondary); font-size: .78rem; font-weight: 800; letter-spacing: .02em; text-decoration: none;
+  transition: border-color .15s, color .15s;
+}
+.botao-redondo:hover, .botao-redondo:focus-visible { border-color: var(--brand-primary); color: var(--brand-primary); }
+.botao-redondo:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-primary) 30%, transparent); }
+.botao-tema .icone { width: 18px; height: 18px; vertical-align: 0; }
+.topo-acoes { gap: .6rem; }
+.topo-acoes .link-entrar { margin: 0 .4rem; }
+@media (max-width: 480px) {
+  .botao-redondo { width: 34px; height: 34px; }
+  .topo-acoes { gap: .4rem; }
+  /* O "Testar gratis" do inicio aparece logo abaixo; no topo ficam marca, idioma e tema. */
+  .topo-acoes .botao-principal { display: none; }
+}
