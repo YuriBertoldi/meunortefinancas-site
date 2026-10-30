@@ -26,6 +26,7 @@ for arquivo in ('estilo.css', 'site.js'):
     shutil.copy(os.path.join(FONTE, arquivo), os.path.join(DESTINO, arquivo))
 shutil.copy(os.path.join(APP, 'static', 'tokens.css'), os.path.join(DESTINO, 'tokens.css'))
 shutil.copy(os.path.join(APP, 'static', 'ilustracoes.css'), os.path.join(DESTINO, 'ilustracoes.css'))
+shutil.copy(os.path.join(APP, 'static', 'vitrine.css'), os.path.join(DESTINO, 'vitrine.css'))
 for arquivo in ('favicon.svg', 'favicon-32.png', 'simbolo-fundo-claro.svg', 'simbolo-fundo-escuro.svg'):
     shutil.copy(os.path.join(APP, 'static', 'marca', arquivo), os.path.join(DESTINO, 'marca', arquivo))
 

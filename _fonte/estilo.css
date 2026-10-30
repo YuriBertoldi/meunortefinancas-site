@@ -214,3 +214,21 @@ a { color: var(--brand-primary); }
   /* O "Testar gratis" do inicio aparece logo abaixo; no topo ficam marca, idioma e tema. */
   .topo-acoes .botao-principal { display: none; }
 }
+
+/* Por dentro: telas do sistema com dados de exemplo (o CSS delas vem do
+   app, vitrine.css); animam quando aparecem na tela (site.js). */
+.por-dentro-telas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: start; }
+.por-dentro-tela { margin: 0; display: grid; gap: 1rem; justify-items: center; }
+.por-dentro-tela .telinha, .por-dentro-tela .orbita { width: 100%; max-width: 360px; }
+.por-dentro-tela .orbita { max-width: 320px; margin: .5rem 0 1rem; }
+.por-dentro-tela figcaption { display: grid; gap: .2rem; text-align: center; color: var(--text-secondary); font-size: .95rem; max-width: 30ch; }
+.por-dentro-tela figcaption strong { color: var(--text-primary); font-size: 1.02rem; }
+.por-dentro-nota { text-align: center; color: var(--text-muted); font-size: .82rem; margin: 2rem 0 0; }
+@media (max-width: 960px) {
+  .por-dentro-telas { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 420px) {
+  .por-dentro-tela .orbita { max-width: 280px; }
+  .por-dentro-tela .orbita .orbita-item { --r: 132px; }
+  .por-dentro-tela .orbita .dentro .orbita-item { --r: 88px; }
+}
