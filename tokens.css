@@ -8,12 +8,12 @@
 
 :root {
   /* Marca */
-  --brand-primary: #159B62;
-  --brand-primary-hover: #117C4E;
+  --brand-primary: #118553;
+  --brand-primary-hover: #0D6B43;
   --brand-accent: #22C477;
   --brand-mint: #75E6B0;
   --brand-soft: #E5F7ED;
-  --brand-gradient: linear-gradient(135deg, #159B62 0%, #22C477 55%, #75E6B0 100%);
+  --brand-gradient: linear-gradient(135deg, #118553 0%, #22C477 55%, #75E6B0 100%);
   --on-brand: #FFFFFF; /* texto sobre o verde da marca */
 
   /* Tema claro */
@@ -33,7 +33,7 @@
   --app-background: linear-gradient(135deg, #F7FBF9 0%, #EDF7F2 52%, #DDF3E7 100%);
 
   /* Cores semanticas */
-  --success: #159B62;
+  --success: #118553;
   --danger: #F04444;
   --danger-hover: #D63535;
   --warning: #F5B942;
@@ -49,7 +49,7 @@
   --border-soft: var(--border);
   --border-mid: var(--border-strong);
   --color-receita: var(--success);
-  --color-receita-2: var(--brand-primary-hover);
+  --color-receita-2: color-mix(in srgb, var(--success) 80%, #000);
   --color-despesa: var(--danger);
   --color-despesa-2: var(--danger-hover);
   --color-sobra: var(--info);
@@ -103,6 +103,92 @@
   --wealth: #C58AE0;
 
   --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.30);
+}
+
+/* Cor do sistema (Configuracoes > Aparencia, models.CoresDoSistema): cada
+   paleta troca a cor da marca e o fundo da aplicacao (degrade, menu,
+   superficie elevada e bordas), no claro e no escuro; receita, despesa,
+   alerta e patrimonio continuam iguais. O seletor do escuro tem os dois
+   atributos para vencer o [data-theme="dark"]. */
+[data-cor="oceano"] {
+  --brand-primary: #1D6FD8; --brand-primary-hover: #1757AB; --brand-accent: #3B8EF0; --brand-mint: #8CC2FF; --brand-soft: #E6F0FD;
+  --brand-gradient: linear-gradient(135deg, #1D6FD8 0%, #3B8EF0 55%, #8CC2FF 100%); --on-brand: #FFFFFF;
+  --bg-primary: #F4F7FB; --bg-gradient-start: #F7FAFD; --bg-gradient-middle: #EDF3FB; --bg-gradient-end: #DDE9F8;
+  --border: #DCE4EE; --border-strong: #C5D2E2;
+  --app-background: linear-gradient(135deg, #F7FAFD 0%, #EDF3FB 52%, #DDE9F8 100%);
+}
+[data-theme="dark"][data-cor="oceano"] {
+  --surface: #0F1A2B;
+  --brand-primary: #5BA2FF; --brand-primary-hover: #9CC7FF; --brand-accent: #9CC7FF; --brand-mint: #9CC7FF; --brand-soft: #13294A; --on-brand: #031225;
+  --bg-primary: #071425; --bg-gradient-start: #061021; --bg-gradient-middle: #0A1A30; --bg-gradient-end: #0B2A55;
+  --sidebar-bg: #0C1626; --surface-elevated: #18233A; --border: #2A3448; --border-strong: #3A4660;
+  --app-background:
+    radial-gradient(ellipse at 85% 0%, rgba(91, 162, 255, 0.22) 0%, rgba(91, 162, 255, 0) 55%),
+    linear-gradient(135deg, #061021 0%, #0A1A30 60%, #071425 100%);
+}
+[data-cor="indigo"] {
+  --brand-primary: #4F46E5; --brand-primary-hover: #3F37C9; --brand-accent: #6366F1; --brand-mint: #A5B4FC; --brand-soft: #EEF0FE;
+  --brand-gradient: linear-gradient(135deg, #4F46E5 0%, #6366F1 55%, #A5B4FC 100%); --on-brand: #FFFFFF;
+  --bg-primary: #F5F5FC; --bg-gradient-start: #F8F8FE; --bg-gradient-middle: #EEEFFC; --bg-gradient-end: #E0E2FA;
+  --border: #DEDFF0; --border-strong: #C8CAE6;
+  --app-background: linear-gradient(135deg, #F8F8FE 0%, #EEEFFC 52%, #E0E2FA 100%);
+}
+[data-theme="dark"][data-cor="indigo"] {
+  --surface: #13132C;
+  --brand-primary: #8B8FF8; --brand-primary-hover: #B4B7FB; --brand-accent: #B4B7FB; --brand-mint: #B4B7FB; --brand-soft: #24264F; --on-brand: #0B0B2A;
+  --bg-primary: #0B0B24; --bg-gradient-start: #08081D; --bg-gradient-middle: #121233; --bg-gradient-end: #1E1B4B;
+  --sidebar-bg: #10102A; --surface-elevated: #1D1D3D; --border: #2E2E4F; --border-strong: #3E3E64;
+  --app-background:
+    radial-gradient(ellipse at 85% 0%, rgba(139, 143, 248, 0.22) 0%, rgba(139, 143, 248, 0) 55%),
+    linear-gradient(135deg, #08081D 0%, #121233 60%, #0B0B24 100%);
+}
+[data-cor="rosa"] {
+  --brand-primary: #D6336C; --brand-primary-hover: #B02659; --brand-accent: #E8598A; --brand-mint: #F7A8C4; --brand-soft: #FCE8F0;
+  --brand-gradient: linear-gradient(135deg, #D6336C 0%, #E8598A 55%, #F7A8C4 100%); --on-brand: #FFFFFF;
+  --bg-primary: #FBF5F7; --bg-gradient-start: #FDF8FA; --bg-gradient-middle: #FBEEF3; --bg-gradient-end: #F8DEE8;
+  --border: #EEDDE4; --border-strong: #E2C6D1;
+  --app-background: linear-gradient(135deg, #FDF8FA 0%, #FBEEF3 52%, #F8DEE8 100%);
+}
+[data-theme="dark"][data-cor="rosa"] {
+  --surface: #1E1218;
+  --brand-primary: #F06A9A; --brand-primary-hover: #F7A8C4; --brand-accent: #F7A8C4; --brand-mint: #F7A8C4; --brand-soft: #4A1E2F; --on-brand: #2A0613;
+  --bg-primary: #1C0A12; --bg-gradient-start: #16070E; --bg-gradient-middle: #2A0F1C; --bg-gradient-end: #4A1630;
+  --sidebar-bg: #1A0C13; --surface-elevated: #2A1720; --border: #432C36; --border-strong: #573C48;
+  --app-background:
+    radial-gradient(ellipse at 85% 0%, rgba(240, 106, 154, 0.20) 0%, rgba(240, 106, 154, 0) 55%),
+    linear-gradient(135deg, #16070E 0%, #2A0F1C 60%, #1C0A12 100%);
+}
+[data-cor="laranja"] {
+  --brand-primary: #C2560F; --brand-primary-hover: #9E450B; --brand-accent: #E07A2E; --brand-mint: #FBC08F; --brand-soft: #FDEEE2;
+  --brand-gradient: linear-gradient(135deg, #C2560F 0%, #E07A2E 55%, #FBC08F 100%); --on-brand: #FFFFFF;
+  --bg-primary: #FBF7F3; --bg-gradient-start: #FDFAF7; --bg-gradient-middle: #FBF1E8; --bg-gradient-end: #F8E3D2;
+  --border: #EDE1D6; --border-strong: #E0CDBD;
+  --app-background: linear-gradient(135deg, #FDFAF7 0%, #FBF1E8 52%, #F8E3D2 100%);
+}
+[data-theme="dark"][data-cor="laranja"] {
+  --surface: #1D150F;
+  --brand-primary: #F59A52; --brand-primary-hover: #FBC08F; --brand-accent: #FBC08F; --brand-mint: #FBC08F; --brand-soft: #47290F; --on-brand: #241002;
+  --bg-primary: #1A0E06; --bg-gradient-start: #140A04; --bg-gradient-middle: #26150A; --bg-gradient-end: #4A2510;
+  --sidebar-bg: #190F08; --surface-elevated: #2A1D13; --border: #43342A; --border-strong: #57463A;
+  --app-background:
+    radial-gradient(ellipse at 85% 0%, rgba(245, 154, 82, 0.20) 0%, rgba(245, 154, 82, 0) 55%),
+    linear-gradient(135deg, #140A04 0%, #26150A 60%, #1A0E06 100%);
+}
+[data-cor="grafite"] {
+  --brand-primary: #3F4A55; --brand-primary-hover: #2C353E; --brand-accent: #64748B; --brand-mint: #A7B4C2; --brand-soft: #EDF0F3;
+  --brand-gradient: linear-gradient(135deg, #3F4A55 0%, #64748B 55%, #A7B4C2 100%); --on-brand: #FFFFFF;
+  --bg-primary: #F5F6F8; --bg-gradient-start: #F8F9FA; --bg-gradient-middle: #EEF0F3; --bg-gradient-end: #E1E5EA;
+  --border: #DDE1E6; --border-strong: #C7CDD5;
+  --app-background: linear-gradient(135deg, #F8F9FA 0%, #EEF0F3 52%, #E1E5EA 100%);
+}
+[data-theme="dark"][data-cor="grafite"] {
+  --surface: #15191E;
+  --brand-primary: #A7B4C2; --brand-primary-hover: #CBD5E1; --brand-accent: #CBD5E1; --brand-mint: #CBD5E1; --brand-soft: #26303A; --on-brand: #0B1015;
+  --bg-primary: #0E1114; --bg-gradient-start: #0A0C0F; --bg-gradient-middle: #14181D; --bg-gradient-end: #1F262E;
+  --sidebar-bg: #111418; --surface-elevated: #1E2329; --border: #333A42; --border-strong: #444C56;
+  --app-background:
+    radial-gradient(ellipse at 85% 0%, rgba(167, 180, 194, 0.14) 0%, rgba(167, 180, 194, 0) 55%),
+    linear-gradient(135deg, #0A0C0F 0%, #14181D 60%, #0E1114 100%);
 }
 
 /* Pico CSS usa as proprias variaveis: apontam para os tokens nos dois temas. */
