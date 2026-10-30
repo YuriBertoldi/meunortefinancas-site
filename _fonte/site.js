@@ -17,6 +17,22 @@
     return valor.toLocaleString(ingles ? 'en-US' : 'pt-BR', { style: 'currency', currency: 'BRL' });
   }
 
+  // Por dentro: cada tela anima quando aparece (a classe .ativo do vitrine.css).
+  const telas = document.querySelectorAll('[data-anima]');
+  if ('IntersectionObserver' in window) {
+    const observador = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (entrada) {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('ativo');
+          observador.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.35 });
+    telas.forEach(function (tela) { observador.observe(tela); });
+  } else {
+    telas.forEach(function (tela) { tela.classList.add('ativo'); });
+  }
+
   // Tema: o botao alterna e guarda a escolha (tema.js aplica no carregamento).
   document.querySelectorAll('.botao-tema').forEach(function (botao) {
     botao.addEventListener('click', function () {

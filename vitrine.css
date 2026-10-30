@@ -1,0 +1,141 @@
+/* Vitrine do login (J21) e do site: telas do sistema com dados de exemplo,
+   feitas em HTML (nada de print), nas cores dos tokens. Cada slide anima
+   quando ganha a classe .ativo (static/js/vitrine.js); com menos movimento,
+   fica tudo parado e visivel. O site (meunortefinancas-site) usa uma copia. */
+
+.telinha {
+  width: min(440px, 100%);
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 48px -24px color-mix(in srgb, var(--text-primary) 35%, transparent);
+  overflow: hidden;
+  text-align: left;
+  font-size: 12px;
+  color: var(--text-primary);
+}
+.telinha-topo {
+  display: flex; align-items: center; gap: .4rem; padding: .55rem .8rem;
+  border-bottom: 1px solid var(--border-soft, var(--border));
+  background: color-mix(in srgb, var(--bg-primary) 60%, var(--surface));
+}
+.telinha-topo i { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+.telinha-topo strong { margin-left: .4rem; font-size: 11px; font-weight: 600; }
+.telinha-topo span { margin-left: auto; font-size: 10.5px; color: var(--text-secondary); }
+.telinha-corpo { padding: .8rem; display: grid; gap: .6rem; }
+
+/* Painel: 3 cartoes e o grafico de 6 meses */
+.telinha-cartoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: .45rem; }
+.telinha-cartao {
+  border: 1px solid var(--border); border-radius: 12px; padding: .55rem .6rem;
+  display: grid; gap: .2rem; background: var(--surface);
+}
+.telinha-cartao small { font-size: 9.5px; color: var(--text-secondary); }
+.telinha-cartao b { font-size: 13px; font-weight: 700; letter-spacing: -.01em; white-space: nowrap; }
+.telinha-cartao.sobra b { color: var(--success); }
+.telinha-cartao em { font-style: normal; font-size: 9.5px; color: var(--success); }
+.telinha-barra { height: 5px; border-radius: 99px; background: var(--border); overflow: hidden; }
+.telinha-barra span { display: block; height: 100%; width: 62%; border-radius: inherit; background: var(--brand-primary); }
+.telinha-grafico {
+  border: 1px solid var(--border); border-radius: 12px; padding: .6rem .7rem .4rem;
+  display: grid; gap: .4rem;
+}
+.telinha-grafico small { font-size: 9.5px; color: var(--text-secondary); }
+.telinha-colunas { height: 86px; display: flex; align-items: flex-end; gap: 10px; }
+.telinha-mes { flex: 1; height: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 3px; }
+.telinha-mes i { width: 9px; border-radius: 4px 4px 0 0; transform-origin: bottom; }
+.telinha-mes i:first-child { background: var(--success); }
+.telinha-mes i:last-child { background: color-mix(in srgb, var(--danger) 80%, transparent); }
+
+/* Pagamentos: grupos por vencimento e o aviso com Desfazer */
+.telinha-grupo { font-size: 9.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-secondary); margin-top: .1rem; }
+.telinha-linha {
+  display: flex; align-items: center; gap: .55rem; padding: .5rem .6rem;
+  border: 1px solid var(--border); border-radius: 11px;
+}
+.telinha-check {
+  width: 16px; height: 16px; border-radius: 5px; border: 1.5px solid var(--border);
+  display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 10px; line-height: 1;
+}
+.telinha-linha div { flex: 1; display: grid; }
+.telinha-linha div small { font-size: 9.5px; color: var(--text-secondary); }
+.telinha-linha b { font-weight: 700; white-space: nowrap; }
+.telinha-linha.atrasada small { color: var(--danger); }
+.telinha-linha.paga .telinha-check { background: var(--success); border-color: var(--success); }
+.telinha-aviso {
+  justify-self: center; display: inline-flex; align-items: center; gap: .6rem;
+  padding: .45rem .75rem; border-radius: 99px; font-size: 10.5px;
+  background: var(--text-primary); color: var(--surface);
+}
+.telinha-aviso u { text-decoration: none; font-weight: 700; color: var(--brand-mint); }
+
+/* Familia: o simbolo da marca no centro e o que a familia usa em orbita */
+.orbita { position: relative; width: min(340px, 100%); aspect-ratio: 1; }
+.orbita-centro {
+  position: absolute; inset: 34%; border-radius: 28px; display: flex; align-items: center; justify-content: center;
+  background: var(--surface); border: 1px solid var(--border);
+  box-shadow: 0 18px 40px -18px color-mix(in srgb, var(--brand-primary) 60%, transparent);
+}
+.orbita-centro img { width: 64%; height: 64%; }
+.orbita-anel { position: absolute; inset: 0; border-radius: 50%; border: 1px dashed color-mix(in srgb, var(--brand-primary) 30%, transparent); }
+.orbita-anel.dentro { inset: 18%; }
+/* --a e o angulo do item no anel; --r, o raio (anel de fora ou de dentro). */
+.orbita-item {
+  position: absolute; left: 50%; top: 50%; width: 0; height: 0;
+  transform: rotate(var(--a)) translateX(var(--r, 160px)) rotate(calc(var(--a) * -1));
+}
+.dentro .orbita-item { --r: 108px; }
+.orbita-item span {
+  position: absolute; transform: translate(-50%, -50%); white-space: nowrap;
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .35rem .65rem; border-radius: 99px; font-size: 11px; font-weight: 600;
+  background: var(--surface); border: 1px solid var(--border);
+  box-shadow: 0 8px 18px -12px color-mix(in srgb, var(--text-primary) 45%, transparent);
+}
+.orbita-item span i {
+  width: 18px; height: 18px; border-radius: 6px; font-style: normal; font-size: 9px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center; color: #fff; background: var(--brand-primary);
+}
+.orbita-balao {
+  position: absolute; right: -6%; bottom: -4%; max-width: 58%;
+  padding: .5rem .7rem; border-radius: 14px 14px 4px 14px; font-size: 11px; line-height: 1.35;
+  background: var(--brand-primary); color: #fff;
+  box-shadow: 0 12px 24px -14px color-mix(in srgb, var(--brand-primary) 80%, transparent);
+}
+.orbita-balao small { display: block; opacity: .85; font-size: 9.5px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Entra aos poucos quando o slide fica ativo. */
+  .ativo .telinha { animation: telinha-sobe .6s ease-out both; }
+  .ativo .telinha-cartao { animation: telinha-sobe .5s ease-out both; }
+  .ativo .telinha-cartao:nth-child(2) { animation-delay: .15s; }
+  .ativo .telinha-cartao:nth-child(3) { animation-delay: .3s; }
+  .ativo .telinha-barra span { animation: telinha-enche 1.4s .6s ease-out both; }
+  .ativo .telinha-mes i { animation: telinha-cresce .8s ease-out both; }
+  .ativo .telinha-mes:nth-child(2) i { animation-delay: .1s; }
+  .ativo .telinha-mes:nth-child(3) i { animation-delay: .2s; }
+  .ativo .telinha-mes:nth-child(4) i { animation-delay: .3s; }
+  .ativo .telinha-mes:nth-child(5) i { animation-delay: .4s; }
+  .ativo .telinha-mes:nth-child(6) i { animation-delay: .5s; }
+  .ativo .telinha-linha { animation: telinha-entra .45s ease-out both; }
+  .ativo .telinha-linha:nth-of-type(2) { animation-delay: .12s; }
+  .ativo .telinha-linha:nth-of-type(3) { animation-delay: .24s; }
+  .ativo .telinha-linha:nth-of-type(4) { animation-delay: .36s; }
+  .ativo .telinha-linha.paga .telinha-check { animation: telinha-marca .4s 1.6s ease-out both; }
+  .ativo .telinha-linha.paga b { animation: telinha-apaga .4s 1.6s ease-out both; }
+  .ativo .telinha-aviso { animation: telinha-aviso .5s 2s ease-out both; }
+  .orbita-giro { position: absolute; inset: 0; animation: orbita-gira 60s linear infinite; }
+  .orbita-giro.dentro { animation-duration: 42s; animation-direction: reverse; }
+  .orbita-giro .orbita-item span { animation: orbita-desgira 60s linear infinite; }
+  .orbita-giro.dentro .orbita-item span { animation-duration: 42s; animation-direction: reverse; }
+  .ativo .orbita-balao { animation: telinha-aviso .5s 1.2s ease-out both; }
+}
+@keyframes telinha-sobe { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes telinha-entra { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+@keyframes telinha-enche { from { width: 0; } }
+@keyframes telinha-cresce { from { transform: scaleY(0); } }
+@keyframes telinha-marca { from { background: transparent; border-color: var(--border); color: transparent; } }
+@keyframes telinha-apaga { to { opacity: .45; text-decoration: line-through; } }
+@keyframes telinha-aviso { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes orbita-gira { to { transform: rotate(360deg); } }
+@keyframes orbita-desgira { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(-360deg); } }

@@ -22,6 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="ilustracoes.css">
+  <link rel="stylesheet" href="vitrine.css">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -95,6 +96,76 @@
       <article class="recurso">{{il:alvo}}<h3>Orçamento que avisa</h3><p>Limite por categoria que vale todo mês. Quando passar de 80%, o painel avisa antes de virar problema.</p></article>
       <article class="recurso">{{il:familia}}<h3>A família junta</h3><p>Cada pessoa com o seu acesso. O administrador escolhe quem vê cada tela.</p></article>
     </div>
+  </section>
+
+  <!-- Por dentro -->
+  <section id="por-dentro" class="secao largura por-dentro">
+    <div class="secao-titulo">
+      <h2>Por dentro do Meu Norte</h2>
+      <p>Telas de verdade do sistema, com dados de exemplo.</p>
+    </div>
+    <div class="por-dentro-telas">
+      <figure class="por-dentro-tela" data-anima>
+        <div class="telinha" aria-hidden="true">
+          <div class="telinha-topo"><i></i><i></i><i></i><strong>Painel</strong><span>‹ Outubro/2026 ›</span></div>
+          <div class="telinha-corpo">
+            <div class="telinha-cartoes">
+              <div class="telinha-cartao"><small>Disponível hoje</small><b>R$ 4.820,00</b><em>3 contas</em></div>
+              <div class="telinha-cartao"><small>Ainda vai sair</small><b>R$ 1.960,00</b><div class="telinha-barra"><span></span></div></div>
+              <div class="telinha-cartao sobra"><small>Sobra prevista</small><b>R$ 2.340,00</b><em>▲ 12% sobre setembro</em></div>
+            </div>
+            <div class="telinha-grafico">
+              <small>Receitas × despesas, últimos 6 meses</small>
+              <div class="telinha-colunas">
+                <div class="telinha-mes"><i style="height:78%"></i><i style="height:66%"></i></div>
+                <div class="telinha-mes"><i style="height:80%"></i><i style="height:74%"></i></div>
+                <div class="telinha-mes"><i style="height:76%"></i><i style="height:58%"></i></div>
+                <div class="telinha-mes"><i style="height:84%"></i><i style="height:62%"></i></div>
+                <div class="telinha-mes"><i style="height:82%"></i><i style="height:55%"></i></div>
+                <div class="telinha-mes"><i style="height:90%"></i><i style="height:52%"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption><strong>Painel do mês</strong>O que você tem hoje, o que ainda vai sair e quanto sobra.</figcaption>
+      </figure>
+      <figure class="por-dentro-tela" data-anima>
+        <div class="telinha" aria-hidden="true">
+          <div class="telinha-topo"><i></i><i></i><i></i><strong>Pagamentos</strong><span>‹ Outubro/2026 ›</span></div>
+          <div class="telinha-corpo">
+            <div class="telinha-grupo">Hoje e amanhã</div>
+            <div class="telinha-linha paga"><span class="telinha-check">✓</span><div>Luz<small>vence hoje</small></div><b>R$ 210,00</b></div>
+            <div class="telinha-linha"><span class="telinha-check"></span><div>Internet<small>vence amanhã</small></div><b>R$ 119,90</b></div>
+            <div class="telinha-grupo">Esta semana</div>
+            <div class="telinha-linha"><span class="telinha-check"></span><div>Escola<small>vence sexta, dia 30</small></div><b>R$ 980,00</b></div>
+            <span class="telinha-aviso">Luz paga pela conta Itaú <u>Desfazer</u></span>
+          </div>
+        </div>
+        <figcaption><strong>Pagamentos</strong>As contas por vencimento e um toque para marcar como paga.</figcaption>
+      </figure>
+      <figure class="por-dentro-tela" data-anima>
+        <div class="orbita" aria-hidden="true">
+          <div class="orbita-anel"></div>
+          <div class="orbita-anel dentro"></div>
+          <div class="orbita-giro">
+            <div class="orbita-item" style="--a:-90deg"><span>Contas</span></div>
+            <div class="orbita-item" style="--a:-18deg"><span>Faturas</span></div>
+            <div class="orbita-item" style="--a:54deg"><span>Previsão</span></div>
+            <div class="orbita-item" style="--a:126deg"><span>Orçamento</span></div>
+            <div class="orbita-item" style="--a:198deg"><span>Relatórios</span></div>
+          </div>
+          <div class="orbita-giro dentro">
+            <div class="orbita-item" style="--a:18deg"><span><i>AS</i>Ana</span></div>
+            <div class="orbita-item" style="--a:162deg"><span><i>LU</i>Lu</span></div>
+            <div class="orbita-item" style="--a:270deg"><span><i>BR</i>Bruno</span></div>
+          </div>
+          <div class="orbita-centro"><img src="marca/simbolo-fundo-escuro.svg" class="so-tema-escuro" alt=""><img src="marca/simbolo-fundo-claro.svg" class="so-tema-claro" alt=""></div>
+          <div class="orbita-balao"><small>Bruno · agora</small>Paguei a luz pelo Itaú ✓</div>
+        </div>
+        <figcaption><strong>A família junta</strong>Cada pessoa com o seu acesso e a conversa da família.</figcaption>
+      </figure>
+    </div>
+    <p class="por-dentro-nota">Valores e nomes de exemplo.</p>
   </section>
 
   <!-- Simulador -->
