@@ -204,11 +204,14 @@
         <h3>Essential</h3>
         <p class="plano-para">For one person or a couple</p>
         <p class="plano-preco"><span class="preco-mensal">R$ 9.90<small>/month</small></span><span class="preco-anual">R$ 99<small>/year</small></span></p>
+        <div class="plano-nora">{{ic:faisca}}<p><strong>Nora, the AI assistant</strong>25 questions a day about the app and your numbers</p></div>
         <ul>
-          <li>{{ic:check}} Up to 2 people</li>
+          <li>{{ic:check}} Up to 3 people</li>
           <li>{{ic:check}} Bills, payments and card statements</li>
-          <li>{{ic:check}} Balance forecast and budgets</li>
-          <li>{{ic:check}} E-mail reminders</li>
+          <li>{{ic:check}} Balance forecast up to 5 years and budgets</li>
+          <li>{{ic:check}} Reports, monthly analysis and month close</li>
+          <li>{{ic:check}} Bank statement import (OFX or CSV)</li>
+          <li>{{ic:check}} E-mail and Telegram reminders, plus a weekly summary</li>
         </ul>
         <a href="https://app.meunortefinancas.com.br/register" class="botao botao-contorno">Get started</a>
       </article>
@@ -217,27 +220,56 @@
         <h3>Family</h3>
         <p class="plano-para">For the whole household</p>
         <p class="plano-preco"><span class="preco-mensal">R$ 14.90<small>/month</small></span><span class="preco-anual">R$ 149<small>/year</small></span></p>
+        <div class="plano-nora">{{ic:faisca}}<p><strong>Nora with 50 questions a day</strong>And the AI you already use, connected to Meu Norte</p></div>
         <ul>
-          <li>{{ic:check}} Up to 5 people</li>
+          <li>{{ic:check}} Up to 8 people</li>
           <li>{{ic:check}} Everything in Essential</li>
           <li>{{ic:check}} Expenses from your bank's phone notifications</li>
-          <li>{{ic:check}} Telegram reminders</li>
           <li>{{ic:check}} Automatic categorization rules</li>
+          <li>{{ic:check}} Google Sheets export</li>
+          <li>{{ic:check}} Claude, ChatGPT and other AIs reading your numbers (MCP)</li>
         </ul>
         <a href="https://app.meunortefinancas.com.br/register" class="botao botao-principal">Try it free</a>
       </article>
-      <article class="plano">
-        <h3>Complete</h3>
-        <p class="plano-para">For bigger families and spreadsheet fans</p>
-        <p class="plano-preco"><span class="preco-mensal">R$ 29.90<small>/month</small></span><span class="preco-anual">R$ 299<small>/year</small></span></p>
-        <ul>
-          <li>{{ic:check}} Up to 8 people</li>
-          <li>{{ic:check}} Everything in Family</li>
-          <li>{{ic:check}} Google Sheets export</li>
-        </ul>
-        <a href="https://app.meunortefinancas.com.br/register" class="botao botao-contorno">Get started</a>
-      </article>
     </div>
+    <details class="comparar-planos">
+      <summary>Compare everything in each plan</summary>
+      <div class="tabela-rolavel">
+        <table>
+          <thead><tr><th scope="col"><span class="sr-only">Feature</span></th><th scope="col">Essential</th><th scope="col">Family</th></tr></thead>
+          <tbody>
+            <tr class="grupo"><th scope="rowgroup" colspan="3">Organization</th></tr>
+            <tr><th scope="row">Bills, payments and card statements</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Balance forecast up to 5 years</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Budget by category</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Reports, monthly analysis and month close</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Investments, emergency fund and loans</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Bank statement import (OFX or CSV)</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr class="grupo"><th scope="rowgroup" colspan="3">Family</th></tr>
+            <tr><th scope="row">People</th><td>up to 3</td><td>up to 8</td></tr>
+            <tr><th scope="row">Each person with their own login and the screens they can see</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Family chat</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Other people's expenses and what each one owes</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr class="grupo"><th scope="rowgroup" colspan="3">Reminders</th></tr>
+            <tr><th scope="row">Due date reminders by e-mail</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Telegram reminders</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Weekly summary and a nudge to log expenses</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr class="grupo"><th scope="rowgroup" colspan="3">Nora, the AI assistant</th></tr>
+            <tr><th scope="row">Questions per day</th><td>25</td><td>50</td></tr>
+            <tr><th scope="row">Answers how-to questions about the app</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Answers questions about your numbers</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Prepares entries for you to confirm</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Your own AI connected to Meu Norte (MCP)</th><td class="nao"><span aria-hidden="true">—</span><span class="sr-only">no</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr class="grupo"><th scope="rowgroup" colspan="3">Automation</th></tr>
+            <tr><th scope="row">Expenses from your bank's phone notifications</th><td class="nao"><span aria-hidden="true">—</span><span class="sr-only">no</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Automatic categorization rules</th><td class="nao"><span aria-hidden="true">—</span><span class="sr-only">no</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr><th scope="row">Google Sheets export</th><td class="nao"><span aria-hidden="true">—</span><span class="sr-only">no</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+            <tr class="grupo"><th scope="rowgroup" colspan="3">Your data</th></tr>
+            <tr><th scope="row">Download everything (spreadsheet and full file)</th><td>{{ic:check}}<span class="sr-only">yes</span></td><td>{{ic:check}}<span class="sr-only">yes</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
   </section>
 
   <section class="secao largura seguranca">
@@ -263,6 +295,7 @@
       <details><summary>How does the free trial work?</summary><p>You get 14 days on the Family plan, no card needed. At the end you choose a plan. If you don't, nothing is deleted: you can still see and download everything, you just can't add new entries.</p></details>
       <details><summary>Can I cancel anytime?</summary><p>Yes, right in the app, without talking to anyone. Your plan runs until the end of the paid period, and your data stays available to download.</p></details>
       <details><summary>Can the whole family use it?</summary><p>Yes. The price is per family: everyone signs in with their own login, and the admin decides who sees each screen.</p></details>
+      <details><summary>What is Nora?</summary><p>Nora is Meu Norte's AI assistant. She answers how-to questions about the app, answers questions about your numbers ("how much will be left this month?") and prepares entries for you to check and confirm. She never saves anything on her own. Essential includes 25 questions a day; Family, 50. Before the first use, you agree to send your questions to an AI provider.</p></details>
       <details><summary>Does it work on my phone?</summary><p>It works in your phone's browser, with shortcuts at the bottom to add, pay and see the forecast. You can add it to your home screen like an app.</p></details>
     </div>
   </section>
